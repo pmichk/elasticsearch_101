@@ -1,0 +1,65 @@
+{
+  "properties": {
+    "serial": {
+      "type": "keyword"
+    },
+    "story": {
+      "type": "keyword"
+    },
+    "title": {
+      "type": "text",
+      "fields": {
+        "keyword": {
+          "type": "keyword"
+        }
+      }
+    },
+    "synopsis": {
+      "type": "text"
+    },
+    "director": {
+      "type": "text",
+      "fields": {
+        "keyword": {
+          "type": "keyword"
+        }
+      }
+    },
+    "writer": {
+      "type": "text",
+      "fields": {
+        "keyword": {
+          "type": "keyword"
+        }
+      }
+    },
+    "maxViewers": {
+      "type": "float"
+    },
+    "avgViewers": {
+      "type": "float"
+    },
+    "firstAired": {
+      "type": "date"
+    },
+    "stories": {
+      "type": "nested",
+      "properties": {
+        "aired": {
+          "type": "date"
+        },
+        "title": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "viewers": {
+          "type": "float"
+        }
+      }
+    }
+  }
+}
